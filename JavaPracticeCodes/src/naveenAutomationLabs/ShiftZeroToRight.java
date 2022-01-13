@@ -1,18 +1,25 @@
 package naveenAutomationLabs;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class ShiftZeroToRight {
 
 	public static void main(String[] args) {
 		int[] arr= {0,1,0,2,0,3,0,0,0,1};
 		
-		shiftToRight(arr);
+		moveZeroes(arr);
+		
+		List<int[]> list=Arrays.asList(arr);
+		
+	    Collections.reverse(list);
+	    System.out.println(list.toString());
 		
 	}
 	
 	
-	public static int[] shiftToRight(int[] arr) {
+	public static int[] moveZeroes(int[] arr) {
 		int[] arrNew=new int[arr.length];
 		int count=0;
 		
